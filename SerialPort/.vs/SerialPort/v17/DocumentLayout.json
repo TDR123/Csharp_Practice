@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\style.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\viewmodel\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\viewmodel\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|e:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\serialport\\serialport\\serialport.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5D07BBB1-771C-4748-AF73-FAA0FA3477E9}|SerialPort\\SerialPort.csproj|solutionrelative:serialport\\serialport.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\28790\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "style.xaml",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\style.xaml",
+              "RelativeDocumentMoniker": "SerialPort\\style.xaml",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\style.xaml*",
+              "RelativeToolTip": "SerialPort\\style.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-15T04:02:13.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "datacontext.cs",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\ViewModel\\datacontext.cs",
+              "RelativeDocumentMoniker": "SerialPort\\ViewModel\\datacontext.cs",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\ViewModel\\datacontext.cs",
+              "RelativeToolTip": "SerialPort\\ViewModel\\datacontext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T02:42:50.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "SerialPort\\View\\MainWindow.xaml",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\View\\MainWindow.xaml",
+              "RelativeToolTip": "SerialPort\\View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-14T12:07:18.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\App.xaml",
+              "RelativeDocumentMoniker": "SerialPort\\App.xaml",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\App.xaml",
+              "RelativeToolTip": "SerialPort\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-14T11:30:03.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ResourcePart.cs",
+              "DocumentMoniker": "C:\\Users\\28790\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
+              "ToolTip": "C:\\Users\\28790\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAABcAAAAAAAAAAAAEwCcAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:16:36.265Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "SerialPort\\AssemblyInfo.cs",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\AssemblyInfo.cs",
+              "RelativeToolTip": "SerialPort\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:15:48.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SerialPort",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\SerialPort.csproj",
+              "RelativeDocumentMoniker": "SerialPort\\SerialPort.csproj",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\SerialPort.csproj",
+              "RelativeToolTip": "SerialPort\\SerialPort.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-14T11:09:44.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "SerialPort\\View\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\\u4EE3\u7801\\c#\u4EE3\u7801\\\u4E32\u53E3\u8FDE\u63A5\\SerialPort\\SerialPort\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "SerialPort\\View\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T11:09:03.241Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
