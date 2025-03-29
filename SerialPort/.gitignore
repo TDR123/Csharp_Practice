@@ -7,3 +7,5 @@ obj/
 *.user
 *.vs/
 *.cache
+# 忽略调试符号文件
+*.pdb
