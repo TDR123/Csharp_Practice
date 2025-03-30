@@ -1,4 +1,4 @@
-﻿using SerialPort.ViewModel;
+﻿using serialport.ViewModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SerialPort
+namespace serialport
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -20,10 +20,11 @@ namespace SerialPort
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new datacontext();
+            this.DataContext = new Datacontext();
         }
 
 
 
+      
     }
 }

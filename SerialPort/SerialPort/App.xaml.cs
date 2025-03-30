@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace SerialPort
+namespace serialport
 {
     /// <summary>
     /// Interaction logic for App.xaml
