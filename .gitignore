@@ -1,0 +1,35 @@
+## 忽略 Visual Studio 特定文件和目录
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.njsproj
+*.jsproj
+*.pubxml
+*.publishsettings
+
+## 忽略编译生成的文件
+bin/
+obj/
+
+*.exe
+*.pdb
+*.ilk
+*.cache
+*.exp
+*.obj
+*.tlog
+*.lastbuildstate
+
+
+## 忽略其他常见中间文件
+*.log
+*.bak
+*.tmp
+*.swp
+*~
+~$*
+Thumbs.db
+.DS_Store
