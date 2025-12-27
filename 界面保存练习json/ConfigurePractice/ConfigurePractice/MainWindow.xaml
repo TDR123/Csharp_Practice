@@ -1,0 +1,83 @@
+﻿<Window
+    x:Class="ConfigurePractice.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converter="clr-namespace:ConfigurePractice.Helper"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ConfigurePractice"
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ConfigurePractice.ViewModel"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    d:DataContext="{d:DesignInstance vm:MainWindowViewModel,
+                                     IsDesignTimeCreatable=True}"
+    Style="{StaticResource MaterialDesignWindow}"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <converter:BoolToTextConverter x:Key="BoolToVisibilityConverter" />
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button
+                Width="100"
+                Height="50"
+                BorderBrush="Black"
+                Content="按钮1"
+                Style="{StaticResource RoundBorderButtonStyle}" />
+        </StackPanel>
+        <ProgressBar
+            Grid.Row="1"
+            Height="30"
+            Style="{StaticResource MaterialDesignLinearProgressBar}"  
+          
+             Foreground="#6A5ACD" 
+            IsIndeterminate="{Binding Flag}" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label
+                Width="70"
+                Height="30"
+                Margin="100,0,10,0"
+                VerticalAlignment="Center"
+                VerticalContentAlignment="Bottom"
+                Content="IP地址:" />
+            <TextBox
+                Margin="0 2 0 2"
+                Width="200"
+                Height="50"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"    
+               
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                Text="{Binding MainWindowModel.IpAddress}" />
+            <Button
+                Width="100"
+                Height="30"
+                Command="{Binding ipConnectionCommand}"
+                Content="{Binding IsConnected, Converter={StaticResource BoolToVisibilityConverter}}"
+                Style="{StaticResource MaterialDesignRaisedButton}"
+                ToolTip="Resource name: MaterialDesignRaisedButton" />
+        </StackPanel>
+        <StackPanel Grid.Row="3">
+            <Button  Style="{StaticResource MaterialDesignFlatDarkBgButton}"
+                    
+                Content="按钮2"
+          />
+        </StackPanel>
+      
+        <Button Grid.Row="4" Style="{StaticResource ButtonSuccess}" Background="#7627F5"
+                Content="这是一个按钮" Margin="10,0,0,0" hc:BorderElement.CornerRadius="5"/>
+        <TextBlock Grid.Row="5" Text="{Binding CurrentTime}" HorizontalAlignment="Right" />
+
+    </Grid>
+</Window>
