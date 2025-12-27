@@ -27,6 +27,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button
@@ -76,8 +77,9 @@
         </StackPanel>
       
         <Button Grid.Row="4" Style="{StaticResource ButtonSuccess}" Background="#7627F5"
-                Content="这是一个按钮" Margin="10,0,0,0" hc:BorderElement.CornerRadius="5"/>
+                Command="{Binding showPage1Command}"
+                Content="page1按钮" Margin="10,0,0,0" hc:BorderElement.CornerRadius="5"/>
         <TextBlock Grid.Row="5" Text="{Binding CurrentTime}" HorizontalAlignment="Right" />
-
+<ContentControl Grid.Row="6" Content="{Binding Content}" />
     </Grid>
 </Window>
