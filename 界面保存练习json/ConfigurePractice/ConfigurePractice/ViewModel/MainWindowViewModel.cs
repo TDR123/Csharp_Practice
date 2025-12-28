@@ -9,6 +9,7 @@ using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Threading;
 namespace ConfigurePractice.ViewModel
 {
@@ -18,14 +19,19 @@ namespace ConfigurePractice.ViewModel
         //[ObservableProperty] string ip="192.168.1.111";
         [ObservableProperty] bool isConnected = false;
         [ObservableProperty] bool flag = false;
+        [ObservableProperty] bool theme = false;
         [ObservableProperty] UserControl content;
+        [ObservableProperty]  Brush background;
+        
         //时间
         [ObservableProperty] string currentTime = DateTime.Now.ToString("HH:mm:ss");
+        private CancellationTokenSource cts { get; set; }  
         public MainWindowViewModel()
         {
             mainWindowModel = new MainWindowModel();
             MainWindowModel.IpAddress = "192.168.0.1";
             Content= new UserControl();
+            Background = Brushes.White;
             //
             // 每秒刷新一次
             var timer = new DispatcherTimer
@@ -51,19 +57,50 @@ namespace ConfigurePractice.ViewModel
         [RelayCommand]
         private void showPage1()
         {
+            cts = new CancellationTokenSource();
             Page1ViewModel p1vm = new Page1ViewModel();
             Content = new page1(p1vm);
             Task.Run(async () =>
             {
                 for (int i = 0; i < 101; i++)
                 {
-                   Dispatcher.CurrentDispatcher.Invoke(() => p1vm.ProgressValue = i);
+                   //cts.Token.ThrowIfCancellationRequested();          // ① 检查取消信号
+                    if (cts.IsCancellationRequested)
+                    {
+
+                        Dispatcher.CurrentDispatcher.Invoke(() => p1vm.ProgressValue = 0);
+                        return;
+                    }
+                    Dispatcher.CurrentDispatcher.Invoke(() => p1vm.ProgressValue = i);
                     await Task.Delay(100);
                 }
-            });
+            },cts.Token);
            
-        
-
+       
         }
+
+        [RelayCommand]
+        private void cancelbutton()
+        {
+           
+
+            cts.Cancel();
+        }
+        //主题切换
+        [RelayCommand]
+        private void ThemeChange()
+        {
+            if (Theme)
+            {
+                Background = (Brush)new BrushConverter().ConvertFrom("#e0171717");
+               // Background = Brushes.DarkGray;
+            }
+            else
+            {
+                Background = Brushes.White;
+            }
+        }
+
+
     }
 }

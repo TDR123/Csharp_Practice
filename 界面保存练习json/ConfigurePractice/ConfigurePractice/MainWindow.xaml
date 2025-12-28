@@ -4,9 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:converter="clr-namespace:ConfigurePractice.Helper"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:local="clr-namespace:ConfigurePractice"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-    xmlns:hc="https://handyorg.github.io/handycontrol"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ConfigurePractice.ViewModel"
     Title="MainWindow"
@@ -19,7 +19,7 @@
     <Window.Resources>
         <converter:BoolToTextConverter x:Key="BoolToVisibilityConverter" />
     </Window.Resources>
-    <Grid>
+    <Grid Background="{Binding Background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="auto" />
@@ -40,10 +40,9 @@
         <ProgressBar
             Grid.Row="1"
             Height="30"
-            Style="{StaticResource MaterialDesignLinearProgressBar}"  
-          
-             Foreground="#6A5ACD" 
-            IsIndeterminate="{Binding Flag}" />
+            Foreground="#6A5ACD"
+            IsIndeterminate="{Binding Flag}"
+            Style="{StaticResource MaterialDesignLinearProgressBar}" />
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Label
                 Width="70"
@@ -53,12 +52,11 @@
                 VerticalContentAlignment="Bottom"
                 Content="IP地址:" />
             <TextBox
-                Margin="0 2 0 2"
                 Width="200"
                 Height="50"
+                Margin="0,2,0,2"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"    
-               
+                VerticalContentAlignment="Center"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding MainWindowModel.IpAddress}" />
             <Button
@@ -70,16 +68,40 @@
                 ToolTip="Resource name: MaterialDesignRaisedButton" />
         </StackPanel>
         <StackPanel Grid.Row="3">
-            <Button  Style="{StaticResource MaterialDesignFlatDarkBgButton}"
-                    
-                Content="按钮2"
-          />
+            <Button Content="按钮2" Style="{StaticResource MaterialDesignFlatDarkBgButton}" />
         </StackPanel>
-      
-        <Button Grid.Row="4" Style="{StaticResource ButtonSuccess}" Background="#7627F5"
+        <StackPanel
+            Grid.Row="4"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Margin="10,0,0,0"
+                hc:BorderElement.CornerRadius="5"
+                Background="#7627F5"
                 Command="{Binding showPage1Command}"
-                Content="page1按钮" Margin="10,0,0,0" hc:BorderElement.CornerRadius="5"/>
-        <TextBlock Grid.Row="5" Text="{Binding CurrentTime}" HorizontalAlignment="Right" />
-<ContentControl Grid.Row="6" Content="{Binding Content}" />
+                Content="page1按钮"
+                Style="{StaticResource ButtonSuccess}" />
+            <Button
+                Margin="50,0,20,0"
+                hc:BorderElement.CornerRadius="5"
+                Background="#7627F5"
+                Command="{Binding cancelbuttonCommand}"
+                Content="取消"
+                Style="{StaticResource ButtonSuccess}" />
+            <ToggleButton               
+                Content="切换"
+                FontSize="10"
+                Width="100"
+                Height="40"
+                IsChecked="{Binding Theme}"
+                Command="{Binding ThemeChangeCommand}"
+                Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Default ToggleButton Style" />
+        </StackPanel>
+
+        <TextBlock
+            Grid.Row="5"
+            HorizontalAlignment="Right"
+            Text="{Binding CurrentTime}" />
+        <ContentControl Grid.Row="6" Content="{Binding Content}" />
     </Grid>
 </Window>
