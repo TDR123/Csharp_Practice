@@ -45,23 +45,31 @@
             Style="{StaticResource MaterialDesignLinearProgressBar}" />
         <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Label
-                Width="70"
-                Height="30"
-                Margin="100,0,10,0"
-                VerticalAlignment="Center"
+                Width="75"
+                Height="35"
+                Margin="100,0,10,5"
+                VerticalAlignment="Bottom"
                 VerticalContentAlignment="Bottom"
-                Content="IP地址:" />
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Content="IP地址 :"
+                FontSize="16" />
             <TextBox
                 Width="200"
-                Height="50"
-                Margin="0,2,0,2"
+                Height="49"
+                Margin="0,0,10,3"
+                VerticalAlignment="Top"
                 HorizontalContentAlignment="Center"
-                VerticalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                Cursor="Pen"
+                FontSize="16"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding MainWindowModel.IpAddress}" />
             <Button
                 Width="100"
                 Height="30"
+                Margin="0,0,0,8"
+                VerticalAlignment="Bottom"
                 Command="{Binding ipConnectionCommand}"
                 Content="{Binding IsConnected, Converter={StaticResource BoolToVisibilityConverter}}"
                 Style="{StaticResource MaterialDesignRaisedButton}"
@@ -82,25 +90,50 @@
                 Content="page1按钮"
                 Style="{StaticResource ButtonSuccess}" />
             <Button
-                Margin="50,0,20,0"
+                Margin="50,5,20,5"
                 hc:BorderElement.CornerRadius="5"
                 Background="#7627F5"
                 Command="{Binding cancelbuttonCommand}"
                 Content="取消"
-                Style="{StaticResource ButtonSuccess}" />
-            <ToggleButton               
-                Content="切换"
-                FontSize="10"
+                Style="{StaticResource ButtonSuccess}"
+                ToolTip="按下进度条归零" />
+
+
+            <Label
+                Margin="0,0,-20,0"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                FontWeight="Bold"
+                Content="Light" />
+
+
+
+            <ToggleButton
                 Width="100"
-                Height="40"
-                IsChecked="{Binding Theme}"
+                Height="30"
                 Command="{Binding ThemeChangeCommand}"
-                Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Default ToggleButton Style" />
+                Content="主题"
+                FontSize="10"
+                IsChecked="{Binding Theme}"
+                Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                ToolTip="Default ToggleButton Style" />
+
+            <Label
+                Margin="-30,0,0,0"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                FontWeight="Bold"
+                Content="Dark" />
+
+
+
         </StackPanel>
 
         <TextBlock
             Grid.Row="5"
+            Margin="0,2,0,2"
             HorizontalAlignment="Right"
+            FontSize="16"
             Text="{Binding CurrentTime}" />
         <ContentControl Grid.Row="6" Content="{Binding Content}" />
     </Grid>

@@ -25,7 +25,7 @@ namespace ConfigurePractice.ViewModel
         
         //时间
         [ObservableProperty] string currentTime = DateTime.Now.ToString("HH:mm:ss");
-        private CancellationTokenSource cts { get; set; }  
+        private CancellationTokenSource? cts { get; set; }  
         public MainWindowViewModel()
         {
             mainWindowModel = new MainWindowModel();
@@ -82,9 +82,13 @@ namespace ConfigurePractice.ViewModel
         [RelayCommand]
         private void cancelbutton()
         {
-           
+           if (cts != null)
+            {
+                cts.Cancel();
+                return;
+            }
 
-            cts.Cancel();
+            return ;
         }
         //主题切换
         [RelayCommand]
@@ -92,8 +96,9 @@ namespace ConfigurePractice.ViewModel
         {
             if (Theme)
             {
-                Background = (Brush)new BrushConverter().ConvertFrom("#e0171717");
-               // Background = Brushes.DarkGray;
+                Background = new BrushConverter().ConvertFrom("#e0171717") as Brush
+                  ?? throw new InvalidOperationException("无法转换颜色");
+                // Background = Brushes.DarkGray;
             }
             else
             {
