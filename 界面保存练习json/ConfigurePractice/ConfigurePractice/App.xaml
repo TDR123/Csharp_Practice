@@ -5,12 +5,13 @@
     xmlns:local="clr-namespace:ConfigurePractice"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:hc="https://handyorg.github.io/handycontrol"
-    StartupUri="MainWindow.xaml">
+    StartupUri="\View\MainWindow.xaml">
     <Application.Resources>
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/样式/style.xaml" />
+                <ResourceDictionary Source="/样式/Converter.xaml"/>
                 <!-- 基础主题设置 -->
                 <materialDesign:BundledTheme 
                     BaseTheme="Light" 

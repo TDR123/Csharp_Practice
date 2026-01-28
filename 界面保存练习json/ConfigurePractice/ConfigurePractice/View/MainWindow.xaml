@@ -9,21 +9,23 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ConfigurePractice.ViewModel"
-    Title="MainWindow"
+    Title="WPF练习"
     Width="800"
     Height="450"
     d:DataContext="{d:DesignInstance vm:MainWindowViewModel,
                                      IsDesignTimeCreatable=True}"
     Style="{StaticResource MaterialDesignWindow}"
     mc:Ignorable="d">
-    <Window.Resources>
-        <converter:BoolToTextConverter x:Key="BoolToVisibilityConverter" />
-    </Window.Resources>
+
     <Grid Background="{Binding Background}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -65,6 +67,27 @@
                 FontSize="16"
                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
                 Text="{Binding MainWindowModel.IpAddress}" />
+            <Label
+                Width="75"
+                Height="35"
+                VerticalAlignment="Bottom"
+                VerticalContentAlignment="Bottom"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Content="端口号："
+                FontSize="16" />
+
+            <TextBox
+                Width="100"
+                Height="49"
+                Margin="0,0,10,3"
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Top"
+                Cursor="Pen"
+                FontSize="16"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                Text="{Binding MainWindowModel.Port}" />
             <Button
                 Width="100"
                 Height="30"
@@ -103,8 +126,8 @@
                 Margin="0,0,-20,0"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                FontWeight="Bold"
-                Content="Light" />
+                Content="Light"
+                FontWeight="Bold" />
 
 
 
@@ -122,8 +145,8 @@
                 Margin="-30,0,0,0"
                 Background="Transparent"
                 BorderBrush="Transparent"
-                FontWeight="Bold"
-                Content="Dark" />
+                Content="Dark"
+                FontWeight="Bold" />
 
 
 
@@ -135,6 +158,39 @@
             HorizontalAlignment="Right"
             FontSize="16"
             Text="{Binding CurrentTime}" />
-        <ContentControl Grid.Row="6" Content="{Binding Content}" />
+        <ContentControl
+            Grid.Row="6"
+            Content="{Binding Content}"
+            Visibility="{Binding Contentvisibility, Converter={StaticResource BoolToVisibilityInverseConverter}}" />
+
+        <StackPanel Grid.Row="7">
+            <DockPanel LastChildFill="True">
+                <Label Width="100" Content="第一个值:" />
+                <TextBox
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="30"
+                    Text="{Binding FirstValue}" />
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="8">
+            <DockPanel LastChildFill="True">
+                <Label Width="100" Content="第二个值:" />
+                <TextBox
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="30"
+                    Text="{Binding SecondValue}" />
+            </DockPanel>
+        </StackPanel>
+
+        <Button
+            Grid.Row="9"
+            Margin="10,0,0,0"
+            hc:BorderElement.CornerRadius="1"
+            Background="#7627F5"
+            Command="{Binding DelegatebuttonCommand}"
+            Content="delegate按钮"
+            Style="{StaticResource ButtonSuccess}" />
     </Grid>
 </Window>

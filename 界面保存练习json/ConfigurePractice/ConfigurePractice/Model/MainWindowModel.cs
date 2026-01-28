@@ -10,5 +10,6 @@ namespace ConfigurePractice.Model
    public partial class MainWindowModel:ObservableObject
     {
         [ObservableProperty] string ipAddress ="192.168.1.100";
+        [ObservableProperty] int port = 8080;
     }
 }

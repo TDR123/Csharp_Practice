@@ -1,0 +1,32 @@
+﻿<Window x:Class="ConfigurePractice.View.Delegatepage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ConfigurePractice.View"
+        mc:Ignorable="d"
+        xmlns:vm="clr-namespace:ConfigurePractice.ViewModel"
+        d:DataContext="{d:DesignInstance Type=vm:Delegateviewmodel, IsDesignTimeCreatable=True}"
+        Title="Delegatepage" Height="450" Width="800">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <DockPanel LastChildFill="True">
+                <Label Content="第一个值:"  Width="100" />
+                <TextBox Text="{Binding DModel.FirstValue}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            </DockPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <DockPanel LastChildFill="True">
+                <Label Content="第二个值:"  Width="100" />
+                <TextBox Text="{Binding DModel.SecondValue}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"/>
+            </DockPanel>
+        </StackPanel>
+        <Button Grid.Row="2" Content="向主窗口传值" Command="{Binding DelegatebuttonCommand}"/>
+    </Grid>
+</Window>
