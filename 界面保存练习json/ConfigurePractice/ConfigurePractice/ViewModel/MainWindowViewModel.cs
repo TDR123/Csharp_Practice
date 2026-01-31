@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using ConfigurePractice.Model;
 using ConfigurePractice.View;
+using ConfigurePractice.View.log1;
 using HandyControl.Controls;
 using HandyControl.Tools.Extension;
 using System;
@@ -29,6 +30,9 @@ namespace ConfigurePractice.ViewModel
         [ObservableProperty] bool contentvisibility;
         [ObservableProperty]  Brush background;
         private TcpClient client;
+        [ObservableProperty] UserControl content1;
+        [ObservableProperty] UserControl content2;
+        [ObservableProperty] UserControl content3;
         //时间
         [ObservableProperty] string currentTime = DateTime.Now.ToString("HH:mm:ss");
         private CancellationTokenSource? cts { get; set; }
@@ -39,6 +43,9 @@ namespace ConfigurePractice.ViewModel
             mainWindowModel = new MainWindowModel();
             MainWindowModel.IpAddress = "192.168.0.1";
             Content= new UserControl();
+            Content1 = new Sendmodel();
+            Content2 = new Logpageview();
+            Content3 = new UserControl1();
             Background = Brushes.White;
             Contentvisibility= false;
             client= new TcpClient();

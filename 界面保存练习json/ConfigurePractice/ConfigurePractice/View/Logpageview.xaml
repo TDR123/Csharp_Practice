@@ -1,0 +1,66 @@
+﻿<UserControl
+    x:Class="ConfigurePractice.View.Logpageview"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ConfigurePractice.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+    xmlns:vm="clr-namespace:ConfigurePractice.ViewModel"
+    d:DataContext="{d:DesignInstance vm:Logpageviewmodel,
+                                     IsDesignTimeCreatable=True}"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <Grid>
+        <!--  ListBox  -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <CheckBox
+                md:CheckBoxAssist.CheckBoxSize="25"
+                Content="通知"
+                Foreground="Black" />
+            <CheckBox
+                md:CheckBoxAssist.CheckBoxSize="25"
+                Content="警告"
+                Foreground="Orange" />
+
+            <CheckBox
+                md:CheckBoxAssist.CheckBoxSize="25"
+                Content="错误"
+                Foreground="Red" />
+
+            <CheckBox
+                md:CheckBoxAssist.CheckBoxSize="25"
+                Content="调试"
+                Foreground="Blue" />
+        </StackPanel>
+
+
+        <ListBox
+            x:Name="studentListBox"
+            Grid.Row="1"
+            ItemsSource="{Binding Loglines}"
+            SelectedValuePath="Id">
+            <ListBox.ItemTemplate>
+                <DataTemplate />
+            </ListBox.ItemTemplate>
+
+            <!--  ListBox 样式  -->
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Padding" Value="0" />
+                    <Setter Property="Margin" Value="0" />
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="LightBlue" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+    </Grid>
+</UserControl>

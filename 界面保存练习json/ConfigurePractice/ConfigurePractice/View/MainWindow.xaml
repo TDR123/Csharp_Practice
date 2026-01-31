@@ -10,8 +10,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="clr-namespace:ConfigurePractice.ViewModel"
     Title="WPF练习"
-    Width="800"
-    Height="450"
+    Width="1200"
+    Height="780"
     d:DataContext="{d:DesignInstance vm:MainWindowViewModel,
                                      IsDesignTimeCreatable=True}"
     Style="{StaticResource MaterialDesignWindow}"
@@ -30,6 +30,9 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button
@@ -192,5 +195,19 @@
             Command="{Binding DelegatebuttonCommand}"
             Content="delegate按钮"
             Style="{StaticResource ButtonSuccess}" />
+        <GridSplitter
+      Grid.Row="10"
+      Height="5"
+      HorizontalAlignment="Stretch"
+      Background="#411de0"
+      ResizeBehavior="CurrentAndNext"
+      ResizeDirection="Auto"
+      ShowsPreview="True" />
+
+        <ContentControl Grid.Row="11"
+              Content="{Binding Content1}"/>
+        <ContentControl Grid.Row="12" Content="{Binding Content3}"/>
+            
+      
     </Grid>
 </Window>
